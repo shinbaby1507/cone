@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 이서윤체 폰트 적용을 위한 코드 */
+        @font-face {
+            font-family: "LeeSeeoyun";
+            src: url("https://cdn.jsdeliver.net/gh/project")
+                format("woff") ;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* body태그 자체에 css요소 부여 */
+        body {
+            font-family: "LeeSeeoyun";
+            margin: 0;
+            display : flex;
+            justify-content: center;
+            background-image: url("./background.png");
+        }
+
+        .container {
+            width: 390px;
+            background-color: #ff9d73;
+            height: 100%;
+        }
+
+        .photos {
+            margin-top: 30px;
+        }
+
+        .photo-frame {
+            background-color: white;
+            margin: 15px 20px;
+            height: 200px;
+            background-size: cover;
+            position: relative;
+
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        /* 아래 영역의 제목 부분은 두껍게, 사이즈는 크게 */
+        .f-title {
+            font-size: 25px;
+            font-weight: 900;
+            color: white;
+        }
+
+        /* 아래 영역의 날자 부분은 폰트가 중간 두께, 사이즈는 작게 */
+        .f-date {
+            font-size: 15px;
+            font-weight: 500;
+            color: white;
+        }
+        #image1 {
+            background-image: url(IMG_2051.JPG);
+        }
+        #image2 {
+            background-image: url(IMG_2056.JPG);
+        }
+        #image3 {
+            background-image: url(IMG_2061.JPG);
+        }
+        #image4 {
+            background-image: url(IMG_2070.JPG);
+        }
+        .photo_description {
+            color: white;
+            background-color: black;
+            width: fit-content;
+            padding: 0 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            position: sticky;
+            bottom: 0;
+            transform: translate(-50%);
+            left: 50%;
+        }
+        .video {
+            width: 100%;
+            height: 100%;
+        }
+
+        .showText {
+            opacity: 0;
+        }
+        .hideText {
+            opacity: 1;
+            transition: opacity 0.5s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photos">
+            <div id="image1" class="photo-frame">
+                <span id="desc1" class="photo_description">
+                   첫 번째 이미지 설명 
+                </span>
+            </div>
+            <div id="image2" class="photo-frame">
+                <span id="desc1" class="photo_description">
+                    두 번째 이미지 설명
+                </span>
+                </div>
+            <div id="image3" class="photo-frame">
+                <span id="desc1" class="photo_description">
+                    세 번재 이미지 설명
+                </span>
+            </div>
+            <div class="photo-frame">
+                <iframe 
+                    src="https://www.youtube.com/embed/TWz1btekxfs"    
+                    frameboder="0"
+                    class="video"
+                    >
+                </iframe>
+                         
+            </div>
+        </div>
+        <div class="footer">
+            <p class="f-title">Happy Lunch Time</p>
+            <p class="f-date">2023.01.23</p>            
+        </div>
+    </div>
+</body>
+</html>
